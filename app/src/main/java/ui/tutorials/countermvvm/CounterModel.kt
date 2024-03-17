@@ -3,15 +3,15 @@ package ui.tutorials.countermvvm
 data class CounterModel (var count : Int)
 
 class CounterRepository {
-    private var counter = CounterModel(0)
+    private var _counter = CounterModel(0)
 
-    fun getCounter() = counter
+    fun getCounter() = _counter
 
     fun incrementCounter(){
-        counter.count++
+        _counter.count++
     }
 
     fun decrementCounter(){
-        counter.count--
+        _counter.count--
     }
 }
